@@ -1,0 +1,233 @@
+html{
+    height: 100%;
+}
+body{
+    /* background-color: #FAE5BA; */
+    background-image: url("../assets/notella\ blend.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100% !important;
+    font-family:'Bad Script', cursive; 
+    /* overflow: hidden; */
+}
+.brand{
+    text-decoration: none;
+    margin-top: 15px !important;
+    margin-bottom: 30px;
+}
+.row{
+    min-height: 100vh !important;
+    flex-wrap: nowrap;
+    /* width: 100%; */
+}
+
+.div-search{
+    margin-top: 40px;
+    background: rgba(250, 229, 186, 0.2) !important;
+    /* opacity: 0.2; */
+}
+main{
+    /* max-width: 920px !important; */
+    flex-shrink:1 !important;
+    max-height: 100%;
+    /* overflow-y: scroll;
+    -webkit-overflow-scrolling: none; */
+}
+main > h1{
+    /* margin-left: 10px !important; */
+    display: flex;
+    justify-content: center;
+}
+.addbtn{
+    margin-top: 15px;
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+.container{
+    /* background-color: transparent; */
+    /* opacity: 0.2; */
+    margin-left: 0%;
+    padding: 0px;
+    /* background: rgba(250, 229, 186, 0.2) !important; */
+}
+.form-control{
+    background: rgba(250, 229, 186, 0.2) !important;
+    /* border: 1px solid black; */
+    /* box-shadow: 3px 3px ; */
+}
+.side-nav{
+    background-color: gray;
+    width: 5rem !important;
+    /* width: 80px; */
+    /* height: 100%; */
+    transition: width 2000ms ease;
+    overflow: hidden !important;
+    /* position: -webkit-sticky; */
+    position: sticky !important;
+    /* top: 5% !important; */
+}
+.side-nav:hover{
+    width: 280px !important;
+}
+.nav-item{
+    display: none;
+    min-width: 0px !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    margin-left: 10px;
+    /* border: 1px solid white; */
+}
+.side-nav:hover .nav-item{
+    display:inline-flex;
+    animation: nav_anim 2s 1;
+}
+@keyframes nav_anim {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+ul{
+    position: fixed;
+    /* max-width: 240px;
+    min-width:5rem; */
+    width: inherit;
+    /* margin: 12px; */
+    padding: 0px 12px !important;
+}
+.dropdown{
+    position: fixed;
+    bottom: 2%;
+    width: inherit;
+    padding: 0px 12px !important;
+    /* padding-left: 12px; */
+
+}
+.side-nav ul li{
+    height: 40px;
+    /* position: fixed !important; */
+    width: 100%;
+}
+li > a{
+    display: flex !important;
+    flex-wrap:nowrap !important;
+    align-items: center !important;
+    min-width: 16px !important;
+}
+.nav1:hover{
+    background: rgba(13, 110, 253, 0.3);
+}
+.nav2:hover{
+    background: rgba(13, 110, 253, 0.3);
+}
+.nav3:hover{
+    background: rgba(13, 110, 253, 0.3);
+}
+/* .dropdown-menu{
+    z-index: 4;
+} */
+.notesContainer{
+    position: absolute;
+    top: 10%;
+    width: 92%;
+    min-height: 88%;
+    z-index: -1;
+}
+.note {
+    /* background-image: url('notebook-paper.png'); /* Replace 'notebook-paper.png' with your image path 
+    background-size: cover; */
+    /* padding: 10px;
+    margin: 10px; */
+    /* background-color: #FAE5BA; */
+    max-width: 100%; /* Adjust the width as needed */
+    height: 600px; /*Adjust the height as needed */
+}
+.note .title{
+    background-color: white;
+    border: none;
+    border-radius: 0.375rem;
+    width: 100%;
+    height: 10%;
+    /* font-family:'Bad Script', cursive; */
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+.note .textarea {
+    background-color: white;
+    border: none;
+    border-radius: 0.375rem;
+    width: 100%;
+    height: 80%;
+    resize: none; /* Prevent textarea from being resized by the user */
+    padding: 0px;
+    margin: 0px;
+    /* Choose an appropriate font */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.2; /* Adjust line height as needed */
+    /*background: transparent;  Make the textarea background transparent to show the lined paper image */
+    z-index: 5;
+}
+.save{
+    margin-left: 15px;
+    border-radius: 15%;
+}
+.delete{
+    margin: 3px;
+    border-radius: 15%;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    min-height: 150px;
+    background: white;
+}
+.empty{
+    padding-bottom: 0% !important;
+}
+.card{
+    border:none;
+    display: none;
+    /* display: flex !important; */
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* overflow: hidden; */
+    background-color: inherit;
+    max-width: 1240px;
+    min-height: 240px;
+}
+.card-body{
+    flex: none;
+    background-color: black;
+    width: 32%;
+    height:240px;
+    position: relative;
+}
+.card-title{
+    max-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.card-note{
+    max-height: 200px;
+    max-width: 100%;
+    /* overflow: hidden; */
+}
+.edit{
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    background: rgba(13, 110, 253, 1);
+    border-radius: 15%;
+    border: none;
+}
+.new-addbtn{
+    display: none;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin-left: 0%;
+    /* position: absolute;
+    right: 15px; */
+    background: rgba(13, 110, 253, 1);
+}

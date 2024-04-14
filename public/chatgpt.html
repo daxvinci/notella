@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Notes App</title>
+    <style>
+        /* Add your CSS styling here */
+        .note {
+            background-image: url('notebook-paper.png'); /* Replace 'notebook-paper.png' with your image path */
+            background-size: cover;
+            padding: 10px;
+            margin: 10px;
+            width: 300px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height a                                                                                                                                                                                                                                                                                                                                                                                                 s needed */
+        }
+
+        .note textarea {
+            border: none;
+            width: 100%;
+            height: 100%;
+            resize: none; /* Prevent textarea from being resized by the user */
+            padding: 10px;
+            font-family: Arial, sans-serif; /* Choose an appropriate font */
+            font-size: 16px; /* Adjust font size as needed */
+            line-height: 1.2; /* Adjust line height as needed */
+            background: transparent; /* Make the textarea background transparent to show the lined paper image */
+        }
+
+        .note button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #ff5733; /* Customize the button style */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Notes App</h1>
+
+    <button id="addNote">+</button> <!-- Plus button to add new notes -->
+    
+    <div id="notesContainer">
+        <!-- Notes will be displayed here -->
+    </div>
+
+    <script>
+        // JavaScript code to handle note creation
+        const addNoteButton = document.getElementById("addNote");
+        const notesContainer = document.getElementById("notesContainer");
+
+        addNoteButton.addEventListener("click", () => {
+            // Create a new note element
+            const note = document.createElement("div");
+            note.className = "note";
+
+            // Create a textarea for the note content
+            const textarea = document.createElement("textarea");
+            textarea.placeholder = "Enter your note here...";
+            note.appendChild(textarea);
+
+            // Create a delete button for removing the note
+            const deleteButton = document.createElement("button");
+            deleteButton.innerText = "Delete";
+            deleteButton.addEventListener("click", () => {
+                notesContainer.removeChild(note);
+            });
+            note.appendChild(deleteButton);
+
+            // Append the note to the notes container
+            notesContainer.appendChild(note);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    background-color: #FAE5BA !important;
+}
+/* .col-about{
+    background: rgba(10.1, 2.07, 10.1, 0.3);
+} */
+u{
+    color:#438B6A;
+}
+.brand:hover{
+    color:#438B6A !important;
+}
+.brand:visited{
+    color:#438B6A !important;
+}
+.text{
+    color:#438B6A;
+}
+.btn{
+    border: 0px solid black;
+}
+.btn:active{
+    transform: translateY(4px);
+}
+.btn-color{
+    background-color: #FFA630;
+    /* color: #438B6A; */
+}
+.btn-color:hover{
+    background-color: #FFA630;
+    opacity: 0.7;
+}
+.btn-color:active{
+    transform: translateY(4px);
+    border: 0px solid black;
+}
